@@ -24,13 +24,13 @@ export default async function handler(req, res) {
         "Authorization": `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
+        model: "gemma2-9b-it",
         temperature: 0.7,
         max_tokens: 3000,
         messages: [
           {
             role: "system",
-            content: "Eres un generador experto de preguntas para el examen Ser Bachiller de Ecuador (SENECYT). Respondes ÚNICAMENTE con JSON válido, sin texto extra, sin backticks, sin explicaciones.",
+            content: "Eres un generador experto de preguntas para el examen Ser Bachiller de Ecuador. Respondes ÚNICAMENTE con JSON válido, sin texto extra, sin backticks. Las explicaciones deben mencionar la regla o concepto específico que aplica, ser claras y nunca repetir las mismas palabras al comparar opciones.",
           },
           {
             role: "user",
