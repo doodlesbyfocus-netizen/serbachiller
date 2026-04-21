@@ -24,7 +24,7 @@ export default async function handler(req, res) {
         "Authorization": `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "gemma2-9b-it",
+        model: "llama3-70b-8192",
         temperature: 0.7,
         max_tokens: 3000,
         messages: [
